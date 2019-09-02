@@ -1,0 +1,26 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Ürün Listesi</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>İsim</th>
+            <th>Ücret</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let product of products | async">
+            <td>{{product.name}}</td>
+            <td>{{product.cost}}</td>
+            <td>{{user.emailId}}</td>
+            <td><button (click)="deleteProduct(product.id)" class="btn btn-danger">Sil</button>
+                <button (click)="productDetails(product.id)" class="btn btn-info" style="margin-left: 10px">Detaylar</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

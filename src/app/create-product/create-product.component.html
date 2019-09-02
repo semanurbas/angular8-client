@@ -1,0 +1,21 @@
+<h3>Ürün Ekle</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">İsim: </label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="product.name" name="name">
+    </div>
+
+    <div class="form-group">
+      <label for="cost">Fiyat: </label>
+      <input type="text" class="form-control" id="cost" required [(ngModel)]="product.cost" name="cost">
+    </div>
+
+    <button type="submit" class="btn btn-success">Ekle</button>
+  </form>
+</div>
+
+<div [hidden]="!submitted">
+  <h4>Ekleme Başarılı!</h4>
+  <!-- <button class="btn btn-success" (click)="newEmployee()">Add</button> -->
+</div>

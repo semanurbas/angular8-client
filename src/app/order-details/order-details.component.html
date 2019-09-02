@@ -1,0 +1,18 @@
+<h2>Sipariş Detayları</h2> 
+
+<hr/>
+<div *ngIf="order">
+  <div>
+    <label><b>UserID: </b></label> {{order.user.id}}
+  </div>
+  <div>
+    <label><b>ÜrünID: </b></label> {{order.product.id}}
+  </div>
+  <div>
+    <label><b>Açıklama: </b></label> {{order.explanation}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Kullanıcı listesine geri dön</button><br>

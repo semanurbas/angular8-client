@@ -1,0 +1,27 @@
+<div class="panel panel-primary">
+        <div class="panel-heading">
+          <h2>Sipariş Listesi</h2>
+        </div>
+        <div class="panel-body">
+          <table class="table table-striped">
+            <thead>
+              <tr>
+                <th>Kullanıcı</th>
+                <th>Ürün</th>
+                <th>Açıklama</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let order of orders | async">
+                <td>{{order.user}}</td>
+                <td>{{order.product}}</td>
+                <td>{{order.explanation}}</td>
+                <td><button (click)="deleteOrder(order.id)" class="btn btn-danger">Sil</button>
+                    <button (click)="orderDetails(order.id)" class="btn btn-info" style="margin-left: 10px">Detaylar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
