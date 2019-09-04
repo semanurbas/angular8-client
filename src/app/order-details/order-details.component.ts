@@ -7,7 +7,8 @@ import { OrderService } from '../order.service';
 @Component({
   selector: 'app-order-details',
   templateUrl: './order-details.component.html',
-  styleUrls: ['./order-details.component.css']
+  styleUrls: ['./order-details.component.css'],
+  providers: [OrderService]
 })
 export class OrderDetailsComponent implements OnInit {
 

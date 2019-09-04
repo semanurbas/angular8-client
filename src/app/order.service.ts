@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 })
 export class OrderService {
 
-  private baseUrl = 'http://localhost:8080/springboot-crud-rest/api/v1/orders';
+  private baseUrl = 'http://api/BostanFreshAngular/api/v1/orders';
 
   constructor(private http: HttpClient) { }
 
